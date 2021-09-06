@@ -1,28 +1,20 @@
 import Head from 'next/head'
 import theme from '../lib/theme'
 
-const makeTitle = (title, name) =>
-  title === name ? title : `${title} – ${name}`
-
 const Meta = ({
-  title = 'Theme Starter', // page title
-  name = 'Theme Starter', // site name
-  description = 'This website was bootstrapped with @lachlanjc’s Next.js Theme Starter.', // page description
-  image = '', // social card image URL
-  url = 'https://next-theme-starter.vercel.app',
+  title = 'Christina Day!', // page title
+  description = 'Some birthday wishes from Hack Clubbers to Christina! 💖', // page description
+  image = '/manifest.png', // social card image URL
+  url = 'https://christinaday.vercel.app',
   children,
 }) => (
   <Head>
     <meta key="og_locale" property="og:locale" content="en_US" />
     <meta key="og_type" property="og:type" content="website" />
-    <meta key="og_site" property="og:site_name" content={name} />
-    <title key="title">{makeTitle(title, name)}</title>
-    <meta key="og_title" property="og:title" content={makeTitle(title, name)} />
-    <meta
-      key="tw_title"
-      name="twitter:title"
-      content={makeTitle(title, name)}
-    />
+    <meta key="og_site" property="og:site_name" content={title} />
+    <title key="title">{title}</title>
+    <meta key="og_title" property="og:title" content={title} />
+    <meta key="tw_title" name="twitter:title" content={title} />
     {description && (
       <>
         <meta key="desc" name="description" content={description} />
