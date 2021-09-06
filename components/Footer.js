@@ -9,12 +9,23 @@ export default function Footer() {
       <br />
       <br />
       <Text variant="caption">
-        Photos courtesy of{' '}
-        <Link href="https://kunalbotla.com">Kunal Botla</Link> (
-        <Link href="https://github.com/kunalbotla/photos/blob/main/README.md">
-          LICENSE
+        Photos by{' '}
+        <Link href="https://kunalbotla.com" target="_blank" rel="noreferrer">
+          Kunal Botla
+        </Link>{' '}
+        (
+        <Link
+          href="https://github.com/kunalbotla/photos/blob/main/README.md"
+          target="_blank"
+          rel="noreferrer"
+        >
+          License
         </Link>
-        ).
+        ). Site by{' '}
+        <Link href="https://ella.cx" target="_blank" rel="noreferrer">
+          @eilla1
+        </Link>{' '}
+        et al.
       </Text>
     </Container>
   )
