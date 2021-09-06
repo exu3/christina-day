@@ -2,12 +2,6 @@ import { Box, Text, Card, Avatar, Container, Heading } from 'theme-ui'
 import Masonry from 'react-masonry-css'
 import { messages } from '../lib/messages.js'
 
-const breakpointCols = {
-  default: 3,
-  1100: 2,
-  500: 1,
-}
-
 export default function Wishes() {
   return (
     <Box sx={{ py: 4 }}>
@@ -16,9 +10,15 @@ export default function Wishes() {
           From the community...
         </Heading>
         <Masonry
-          breakpointCols={breakpointCols}
-          className=""
-          style={{ display: 'flex', width: 'auto' }}
+          breakpointCols={{
+            default: 3,
+            1024: 3,
+            640: 2,
+            480: 1,
+          }}
+          className="masonry-posts"
+          columnClassName="masonry-posts-column"
+          // style={{ display: 'flex', width: 'auto' }}
         >
           {messages.map(msg => {
             return (
@@ -33,6 +33,51 @@ export default function Wishes() {
           })}
         </Masonry>
       </Container>
+      <style jsx global key="masonry-style">{`
+        .masonry-posts {
+          display: flex;
+          width: 100%;
+          max-width: 100%;
+        }
+        .masonry-posts-column {
+          background-clip: padding-box;
+        }
+        .post {
+          margin-bottom: 2px;
+        }
+        .masonry-posts-column:nth-child(1) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        .masonry-posts-column:nth-child(2) {
+          padding-left: 16px;
+          padding-right: 0px;
+        }
+        @media (max-width: 640px) {
+          .masonry-posts-column:nth-child(1) {
+            padding-left: 0px;
+            padding-right: 16px;
+          }
+          .masonry-posts-column:nth-child(2) {
+            padding-left: 16px;
+            padding-right: 0px;
+          }
+        }
+        @media (min-width: 641px) {
+          .masonry-posts-column:nth-child(1) {
+            padding-left: 0px;
+            padding-right: 16px;
+          }
+          .masonry-posts-column:nth-child(2) {
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+          .masonry-posts-column:nth-child(3) {
+            padding-left: 16px;
+            padding-right: 0px;
+          }
+        }
+      `}</style>
     </Box>
   )
 }
