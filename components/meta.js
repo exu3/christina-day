@@ -3,7 +3,7 @@ import theme from '../lib/theme'
 
 const Meta = ({
   title = 'Christina Day!', // page title
-  description = 'Some birthday wishes from Hack Clubbers to Christina! 💖', // page description
+  description = 'Birthday wishes from the Hack Club community to Christina! 💖', // page description
   image = '/manifest.png', // social card image URL
   url = 'https://christinaday.vercel.app',
   children,
