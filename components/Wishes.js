@@ -16,9 +16,8 @@ export default function Wishes() {
             640: 2,
             480: 1,
           }}
-          className="masonry-posts"
-          columnClassName="masonry-posts-column"
-          // style={{ display: 'flex', width: 'auto' }}
+          className="masonry-items"
+          columnClassName="masonry-items-column"
         >
           {messages.map(msg => {
             return (
@@ -34,46 +33,46 @@ export default function Wishes() {
         </Masonry>
       </Container>
       <style jsx global key="masonry-style">{`
-        .masonry-posts {
+        .masonry-items {
           display: flex;
           width: 100%;
           max-width: 100%;
         }
-        .masonry-posts-column {
+        .masonry-items-column {
           background-clip: padding-box;
         }
-        .post {
-          margin-bottom: 2px;
+        .card {
+          margin-bottom: 15px;
         }
-        .masonry-posts-column:nth-child(1) {
+        .masonry-items-column:nth-child(1) {
           padding-left: 0px;
           padding-right: 0px;
         }
-        .masonry-posts-column:nth-child(2) {
-          padding-left: 16px;
+        .masonry-items-column:nth-child(2) {
+          padding-left: 10px;
           padding-right: 0px;
         }
         @media (max-width: 640px) {
-          .masonry-posts-column:nth-child(1) {
+          .masonry-items-column:nth-child(1) {
             padding-left: 0px;
-            padding-right: 16px;
+            padding-right: 10px;
           }
-          .masonry-posts-column:nth-child(2) {
-            padding-left: 16px;
+          .masonry-items-column:nth-child(2) {
+            padding-left: 10px;
             padding-right: 0px;
           }
         }
         @media (min-width: 641px) {
-          .masonry-posts-column:nth-child(1) {
+          .masonry-items-column:nth-child(1) {
             padding-left: 0px;
-            padding-right: 16px;
+            padding-right: 10px;
           }
-          .masonry-posts-column:nth-child(2) {
-            padding-left: 8px;
-            padding-right: 8px;
+          .masonry-items-column:nth-child(2) {
+            padding-left: 3px;
+            padding-right: 3px;
           }
-          .masonry-posts-column:nth-child(3) {
-            padding-left: 16px;
+          .masonry-items-column:nth-child(3) {
+            padding-left: 10px;
             padding-right: 0px;
           }
         }
@@ -84,7 +83,7 @@ export default function Wishes() {
 
 function Message({ github, name, note, image }) {
   return (
-    <Card as="div" sx={{ mr: 4, mb: 4 }} variant="interactive">
+    <Card as="div" sx={{ mr: 4, mb: 4 }} variant="interactive" className="card">
       {(note && (
         <>
           <Box as="div" sx={{ display: 'flex', alignItems: 'center', pb: 3 }}>
