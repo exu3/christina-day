@@ -1,6 +1,6 @@
 import { IconButton, useColorMode } from 'theme-ui'
 
-const ColorSwitcher = props => {
+export default function ColorSwitcher(props) {
   const [mode, setMode] = useColorMode()
   return (
     <IconButton
@@ -35,5 +35,3 @@ const ColorSwitcher = props => {
     </IconButton>
   )
 }
-
-export default ColorSwitcher
