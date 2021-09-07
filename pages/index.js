@@ -2,6 +2,7 @@ import { Box } from 'theme-ui'
 import Landing from '../components/Landing'
 import Wishes from '../components/Wishes'
 import Footer from '../components/Footer'
+import ConfettiRain from '../components/ConfettiRain'
 
 const styles = `
   ::selection {
@@ -18,6 +19,7 @@ export default function Home() {
       <Landing />
       <Wishes />
       <Footer />
+      <ConfettiRain />
     </Box>
   )
 }
