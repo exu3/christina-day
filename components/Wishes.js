@@ -83,7 +83,7 @@ export default function Wishes() {
 
 function Message({ github, name, note, image }) {
   return (
-    <Card as="div" sx={{ mr: [0, 4], mb: 4 }} variant="interactive" className="card">
+    <Card as="div" sx={{ mr: [0, null, null, null, 4], mb: 4 }} variant="interactive" className="card">
       {(note && (
         <>
           <Box as="div" sx={{ display: 'flex', alignItems: 'center', pb: 3 }}>
