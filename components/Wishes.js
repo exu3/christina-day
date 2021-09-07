@@ -55,7 +55,7 @@ export default function Wishes() {
         @media (max-width: 640px) {
           .masonry-items-column:nth-child(1) {
             padding-left: 0px;
-            padding-right: 10px;
+            padding-right: 0px;
           }
           .masonry-items-column:nth-child(2) {
             padding-left: 10px;
@@ -83,7 +83,7 @@ export default function Wishes() {
 
 function Message({ github, name, note, image }) {
   return (
-    <Card as="div" sx={{ mr: 4, mb: 4 }} variant="interactive" className="card">
+    <Card as="div" sx={{ mr: [0, 4], mb: 4 }} variant="interactive" className="card">
       {(note && (
         <>
           <Box as="div" sx={{ display: 'flex', alignItems: 'center', pb: 3 }}>
